@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: sans-serif;
+  }
+  
+  canvas {
+    display: block;
+  }
+  
+  /* Parameter Panel on the right side */
+  #paramPanel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+    z-index: 9999;
+    transition: width 0.3s;
+  }
+  
+  /* Collapsed panel reduces width to 40px */
+  #paramPanel.collapsed {
+    width: 40px;
+  }
+  
+  /* Panel header */
+  #paramHeader {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #paramLabel {
+    font-size: 16px;
+    color: white;
+  }
+  
+  #paramArrow {
+    font-size: 16px;
+    color: white;
+  }
+  
+  /* Panel content */
+  #paramContent {
+    padding: 10px;
+    color: white;
+  }
+  
+  /* Range inputs and labels */
+  input[type="range"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  label,
+  span {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: white;
+  }
+  
+  /* Subsections inside the panel */
+  .subsection {
+    border-top: 1px solid #444;
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+  
+  .subHeader {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+  }
+  
+  .subArrow {
+    font-size: 14px;
+  }
+  
+  /* SubContent */
+  .subContent {
+    padding: 5px 0;
+  }
+  
+  /* Fixed clock in the top-left corner */
+  #clock {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    z-index: 10000;
+  }
+  
+  /* Info panel that appears on hover */
+  #infoPanel {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    pointer-events: none;
+  }
+  
+  #infoPanel.visible {
+    display: block;
+  }
+  
+  /* Object label styling */
+  .objectLabel {
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    pointer-events: none;
+    text-shadow: 0 0 5px black;
+  }
+  
